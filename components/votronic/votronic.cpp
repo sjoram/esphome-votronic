@@ -94,7 +94,7 @@ bool Votronic::parse_votronic_byte_(uint8_t byte) {
   const uint8_t frame_len = VOTRONIC_FRAME_LENGTH;
 
   if (at == 0 && raw[0] != VOTRONIC_FRAME_START) {
-    ESP_LOGW(TAG, "Invalid header (0x%02X)", raw[0]);
+ //   ESP_LOGW(TAG, "Invalid header (0x%02X)", raw[0]);
 
     // return false to reset buffer
     return false;
