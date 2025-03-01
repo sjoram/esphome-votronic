@@ -17,6 +17,8 @@ CONF_AES_ACTIVE = "aes_active"
 CONF_PV_CONTROLLER_ACTIVE = "pv_controller_active"
 CONF_PV_CURRENT_REDUCTION = "pv_current_reduction"
 CONF_PV_AES_ACTIVE = "pv_aes_active"
+CONF_AC_CHARGER_ACTIVE = "ac_charger_active"
+CONF_B2B_CHARGER_ACTIVE = "b2b_charger_active"
 
 BINARY_SENSORS = [
     CONF_CHARGING,
@@ -27,6 +29,8 @@ BINARY_SENSORS = [
     CONF_PV_CONTROLLER_ACTIVE,
     CONF_PV_CURRENT_REDUCTION,
     CONF_PV_AES_ACTIVE,
+    CONF_AC_CHARGER_ACTIVE,
+    CONF_B2B_CHARGER_ACTIVE,
 ]
 
 CONFIG_SCHEMA = cv.Schema(
@@ -56,6 +60,12 @@ CONFIG_SCHEMA = cv.Schema(
         cv.Optional(CONF_PV_AES_ACTIVE): binary_sensor.binary_sensor_schema(
             icon="mdi:export",
         ),
+        cv.Optional(CONF_AC_CHARGER_ACTIVE): binary_sensor.binary_sensor_schema(
+            icon="mdi:power",
+        ),
+         cv.Optional(CONF_B2B_CHARGER_ACTIVE): binary_sensor.binary_sensor_schema(
+            icon="mdi:power",
+        ),       
     }
 )
 
