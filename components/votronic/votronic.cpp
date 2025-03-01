@@ -171,7 +171,7 @@ void Votronic::decode_solar_charger_data_(const std::vector<uint8_t> &data) {
   };
 
   ESP_LOGI(TAG, "Solar charger data received");
-  ESP_LOGVV(TAG, "  %s", format_hex_pretty(&data.front(), data.size()).c_str());
+  ESP_LOGI(TAG, "  %s", format_hex_pretty(&data.front(), data.size()).c_str());
 
   // Byte Len Payload     Description                      Unit  Precision
   //   0   1  0xAA        Sync Byte
@@ -217,7 +217,7 @@ void Votronic::decode_charger_data_(const uint8_t &frame_type, const std::vector
   };
 
   ESP_LOGI(TAG, "Charger data received");
-  ESP_LOGVV(TAG, "  %s", format_hex_pretty(&data.front(), data.size()).c_str());
+  ESP_LOGI(TAG, "  %s", format_hex_pretty(&data.front(), data.size()).c_str());
 
   // Byte Len Payload     Description                      Unit  Precision
   //   0   1  0xAA        Sync Byte
