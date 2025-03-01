@@ -16,6 +16,9 @@ class Votronic : public uart::UARTDevice, public PollingComponent {
   void update() override;
   float get_setup_priority() const override;
 
+  void set_ac_charger_active_binary_sensor(binary_sensor::BinarySensor *ac_charger_active_binary_sensor) {
+    ac_charger_active_binary_sensor_ = ac_charger_active_binary_sensor;
+  }
   void set_charging_binary_sensor(binary_sensor::BinarySensor *charging_binary_sensor) {
     charging_binary_sensor_ = charging_binary_sensor;
   }
