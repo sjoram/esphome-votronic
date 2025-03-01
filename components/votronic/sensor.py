@@ -27,11 +27,11 @@ DEPENDENCIES = ["votronic"]
 
 CODEOWNERS = ["@syssi"]
 
-# CONF_BATTERY_VOLTAGE = "battery_voltage"
+CONF_BATTERY_VOLTAGE = "battery_voltage"
 CONF_SECONDARY_BATTERY_VOLTAGE = "secondary_battery_voltage"
 CONF_BATTERY_CAPACITY_REMAINING = "battery_capacity_remaining"
 CONF_STATE_OF_CHARGE = "state_of_charge"
-# CONF_CURRENT = "current"
+CONF_CURRENT = "current"
 CONF_BATTERY_NOMINAL_CAPACITY = "battery_nominal_capacity"
 CONF_PV_VOLTAGE = "pv_voltage"
 CONF_PV_CURRENT = "pv_current"
