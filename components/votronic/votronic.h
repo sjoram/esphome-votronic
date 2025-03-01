@@ -112,6 +112,8 @@ class Votronic : public uart::UARTDevice, public PollingComponent {
   binary_sensor::BinarySensor *pv_controller_active_binary_sensor_;
   binary_sensor::BinarySensor *pv_aes_active_binary_sensor_;
   binary_sensor::BinarySensor *pv_current_reduction_binary_sensor_;
+  binary_sensor::BinarySensor *ac_charger_active_binary_sensor_;
+  binary_sensor::BinarySensor *b2b_charger_active_binary_sensor_;
 
   sensor::Sensor *battery_voltage_sensor_;
   sensor::Sensor *secondary_battery_voltage_sensor_;
