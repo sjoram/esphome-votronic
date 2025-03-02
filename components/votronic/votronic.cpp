@@ -253,10 +253,10 @@ void Votronic::decode_charger_data_(const uint8_t &frame_type, const std::vector
   this->publish_state_(this->current_reduction_binary_sensor_, (data[14] & (1 << 4)));
   this->publish_state_(this->aes_active_binary_sensor_, (data[14] & (1 << 5)));
     
-  if ( VOTRONIC_FRAME_TYPE_CHARGER && ( (data[14] & (1 << 2)) == 1 or (data[14] & (1 << 3)) )){
+  if ( frame_type == VOTRONIC_FRAME_TYPE_CHARGER && ( (data[14] & (1 << 2)) == 1 or (data[14] & (1 << 3)) )){
     this->publish_state_(this->ac_charger_active_binary_sensor_, 0);
   }      
-  if ( VOTRONIC_FRAME_TYPE_CHARGING_CONVERTER && ( (data[14] & (1 << 2)) == 1 or (data[14] & (1 << 3)) )){
+  if ( frame_type == VOTRONIC_FRAME_TYPE_CHARGING_CONVERTER && ( (data[14] & (1 << 2)) == 1 or (data[14] & (1 << 3)) )){
     this->publish_state_(this->ac_charger_active_binary_sensor_, 0);
   }  
 }
