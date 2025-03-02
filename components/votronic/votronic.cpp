@@ -258,7 +258,7 @@ void Votronic::decode_charger_data_(const uint8_t &frame_type, const std::vector
   } else if ( frame_type == VOTRONIC_FRAME_TYPE_CHARGER && ( !(data[14] & (1 << 2)) && !(data[14] & (1 << 3)) ))  {
     this->publish_state_(this->ac_charger_active_binary_sensor_, 0);
   }    
-  if ( frame_type == VOTRONIC_FRAME_TYPE_CHARGING_CONVERTER && && ( (data[14] & (1 << 2)) || (data[14] & (1 << 3)) )){
+  if ( frame_type == VOTRONIC_FRAME_TYPE_CHARGING_CONVERTER && ( (data[14] & (1 << 2)) || (data[14] & (1 << 3)) )){
     this->publish_state_(this->b2b_charger_active_binary_sensor_, 1);
   } else if ( frame_type == VOTRONIC_FRAME_TYPE_CHARGING_CONVERTER && ( !(data[14] & (1 << 2)) && !(data[14] & (1 << 3)) ))  {
     this->publish_state_(this->b2b_charger_active_binary_sensor_, 0);
